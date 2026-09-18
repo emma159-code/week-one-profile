@@ -1,0 +1,476 @@
+/* ================================
+   GENERAL SETTINGS
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+}
+
+
+/* ================================
+   NAVIGATION BAR
+================================ */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 28px 5%;
+
+    z-index: 10;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 45px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    opacity: 0.6;
+}
+
+.menu-icon {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 120px 20px 80px;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 18, 35, 0.65),
+            rgba(10, 18, 35, 0.8)
+        ),
+        url("profile.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.small-title {
+    display: inline-block;
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border-radius: 30px;
+
+    padding: 10px 25px;
+
+    font-size: 11px;
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(70px, 10vw, 140px);
+
+    font-weight: normal;
+
+    line-height: 0.85;
+
+    letter-spacing: -5px;
+
+    margin-bottom: 30px;
+}
+
+.profession {
+    font-size: 18px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 25px;
+}
+
+.introduction {
+    max-width: 600px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+
+    color: #d1d5db;
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.button {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    border: 1px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+    color: #111827;
+}
+
+.button-outline {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* ================================
+   SCROLL DOWN
+================================ */
+
+.scroll-down {
+    position: absolute;
+
+    bottom: 30px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 20px;
+}
+
+.scroll-down span {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #d1d5db;
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+.section {
+    padding: 120px 8%;
+
+    background: #f5f5f2;
+
+    color: #172033;
+}
+
+.section-content {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.section-label {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 30px;
+
+    text-transform: uppercase;
+}
+
+.section h2 {
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(45px, 6vw, 80px);
+
+    font-weight: normal;
+
+    line-height: 0.95;
+
+    margin-bottom: 40px;
+}
+
+.section-content > p:not(.section-label) {
+    max-width: 650px;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* ================================
+   SKILLS
+================================ */
+
+.skills-section {
+    background: #172033;
+
+    color: white;
+}
+
+.skills {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    margin-top: 60px;
+}
+
+.skill {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+
+    padding: 25px 0;
+}
+
+.skill span {
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #aab2c0;
+}
+
+.skill h3 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    font-weight: normal;
+
+    margin: 12px 0;
+}
+
+.skill p {
+    color: #c5cad3;
+
+    line-height: 1.6;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-section {
+    min-height: 70vh;
+
+    padding: 120px 8%;
+
+    text-align: center;
+
+    background: #e7e4dc;
+
+    color: #172033;
+}
+
+.contact-section h2 {
+    font-family: Georgia, serif;
+
+    font-size: clamp(55px, 8vw, 100px);
+
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+.contact-section p {
+    margin-bottom: 30px;
+}
+
+.contact-button,
+.github-button {
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    margin: 5px;
+
+    text-decoration: none;
+
+    border: 1px solid #172033;
+
+    color: #172033;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.contact-button:hover,
+.github-button:hover {
+    background: #172033;
+
+    color: white;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 25px 5%;
+
+    background: #0c1220;
+
+    color: #9ca3af;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 12px;
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 100px 20px 80px;
+
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+        font-size: 70px;
+
+        letter-spacing: -3px;
+    }
+
+    .profession {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+    .introduction {
+        font-size: 14px;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .button {
+        width: 200px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 80px 25px;
+    }
+
+    .contact-section {
+        padding: 80px 25px;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 10px;
+
+        text-align: center;
+    }
+}
