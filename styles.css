@@ -2,4 +2,32 @@ body {
     color: white;
     background-image: url('mountain.png');
     background-size: cover;
+} 
+header { 
+    display: flex;
+    justify-content: space-between;
+}
+ul {
+    display: flex;
+    margin: 0 auto;
+    list-style-type: none;
+    
+}
+li {
+    padding: 20px;
+}
+.content {
+    text-align: center;
+    margin-top: 150px;
+}
+button {
+    border-color: white;
+    background: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 50px;
+    font-family: 'Times New Roman';
 }
