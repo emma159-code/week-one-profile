@@ -1,0 +1,258 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: #222;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.navigation {
+    display: flex;
+    gap: 40px;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navigation a:hover {
+    opacity: 0.7;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-button,
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-image:
+        linear-gradient(
+            rgba(20, 20, 40, 0.45),
+            rgba(20, 20, 40, 0.55)
+        ),
+        url("mountain.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 900px;
+    padding: 20px;
+}
+
+
+/* =========================
+   SMALL BUTTON
+========================= */
+
+.small-button {
+    padding: 10px 22px;
+
+    border: 1px solid white;
+    border-radius: 30px;
+
+    background: transparent;
+    color: white;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+}
+
+.small-button:hover {
+    background-color: white;
+    color: #222;
+}
+
+
+/* =========================
+   MAIN TITLE
+========================= */
+
+.hero h1 {
+    margin: 30px 0 20px;
+
+    font-size: 55px;
+    line-height: 1.1;
+
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero p {
+    max-width: 550px;
+    margin: 0 auto 30px;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ARROW BUTTON
+========================= */
+
+.next-button {
+    width: 55px;
+    height: 55px;
+
+    border: 1px solid white;
+    border-radius: 50%;
+
+    background: transparent;
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+.next-button:hover {
+    background-color: white;
+    color: #222;
+}
+
+
+/* =========================
+   OTHER SECTIONS
+========================= */
+
+main section:not(.hero) {
+    min-height: 60vh;
+
+    padding: 100px 10%;
+
+    color: #222;
+    background-color: white;
+}
+
+main section h2 {
+    font-size: 35px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px;
+
+    text-align: center;
+
+    background-color: #111;
+    color: white;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0 25px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .small-button {
+        font-size: 9px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+}
