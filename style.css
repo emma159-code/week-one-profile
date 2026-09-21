@@ -1,0 +1,26 @@
+body {
+font-family: Arial, sans-serif;
+background: #d8d5d5;
+text-align: justify;
+
+}
+img {
+    width: 200px;
+    height: 300px;
+    border-radius: 40%;
+}
+main {
+max-width: 500px;
+margin: 50px auto;
+padding: 30px;
+background: white;
+border-radius: 5%;
+}
+
+button {
+padding: 10px 20px;
+background-color: rgb(158, 234, 158);
+font-weight: bold;
+font-size: 16px;
+border-radius: 10%;
+}
