@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--the header, so am thinking that this website is going to need the following so that
+    any user can navigate the website to see the our services, contacts and so on-->>
+    <header>
+        <a href="#" class="logo">GROUP 6 COMPANY</a>
+        <nav>
+            <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="testimonials">Testimonials</a></li>
+                <li><a href="contact">Contact Us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <!--This will be the main content of the page. Let us use it to create the paragraphs
+        and headings within the page-->
+        <section id="home" class="hero-section">
+            <!--meaning that it will bring the user here when he presses the 
+            home navigation -->
+            <h1>AMAZING and BEAUTIFUL VIEWS for EVERYBODY</h1>
+            <p>
+                We believe that <strong>natural beauty</strong> should have no boundaries. 
+                That is why we curate accessible, awe-inspiring destinations
+                 that promise to leave a lasting impression on every traveler, 
+                 adventurer, and sightseer.
+            </p>
+            <!--now we put a call to action button that makes a user click to see what your
+            website offers. Its what you want the user to click eg. buy now, sign up e.t.c.-->
+            <a hreff="#destinations" class="cta-button">Explore Views</a>
+        </section>
+        <section id="destinations" class="destinations-section">
+            <h2>Our top handpicked vistas</h2>
+            <p class="section subtitle"
+                Accessible breathtaking landscapes tailored for each adventurer
+            </p>
+            <div class="card-grid">
+                <article class="destination-card">
+                    <!--first destination-->
+                    <img src="mountain-view.jpg" alt="majestic snow capped mountain peaks at sunrise">
+                    <h3>Alpine Horizons</h3>
+                    <p>
+                        Tranquil, high-altitude ridges fully outfitted with paved
+                         boardwalks and safety viewing platforms
+                    </p>
+                    <a href="#" class="read-more">Learn More</a>
+                </article>
+
+                <article class="destination-card">
+                    <!--second destination-->
+                    <img src="ocean view" alt="Golden sand beach looking out to turquoise ocean water">
+                    <h3>Coastal serenity</h3>
+                    <p>Miles of accessible coastline paths looking out over crystal-clear azure waters</p>    
+                    <a href="#" class="read-more">Learn More</a>
+                </article>
+            </div>
+        </section>
+        <section id="gallery" class="gallery-section">
+            <h2>Captured moments</h2>
+            <p class="section-subtitle">A glimpse of the sights waiting for you</p>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item"><img src="thumb1.jpg" alt="Sunset over a valley"></div>
+                <div class="gallery-item"><img src="thumb2.jpg" alt="Mist over a forest lake"></div>
+                <div class="gallery-item"><img src="thumb3.jpg" alt="City skyline at night"></div>
+                <div class="gallery-item"><img src="thumb4.jpg" alt="Waterfall deep in a jungle"></div>
+            </div>
+        </section>
+
+
+            <!-- =========================================================
+                5. TESTIMONIALS SECTION (Social proof)
+                ========================================================= -->
+        <section id="testimonials" class="testimonials-section">
+            <h2>What Our Viewers Say</h2>
+            
+            <div class="testimonial-container">
+                <blockquote>
+                <p>"I never thought I'd be able to see a mountain sunset like that. The accessibility guidelines they provided made it effortless for my family."</p>
+                <cite>— Sarah M., Traveler</cite>
+                </blockquote>
+
+                <blockquote>
+                <p>"True to their word, these spots offer absolute perfection without needing advanced hiking gear. Truly views for everybody!"</p>
+                <cite>— David K., Photographer</cite>
+                </blockquote>
+            </div>
+        </section>
+
+
+            <!-- =========================================================
+                6. CONTACT SECTION (Form input)
+                ========================================================= -->
+        <section id="contact" class="contact-section">
+            <h2>Plan Your Next View</h2>
+            <p>Sign up to receive our monthly guide to the world's most accessible, stunning viewpoints.</p>
+            
+            <form action="#" method="POST">
+                <label for="user-email">Email Address:</label>
+                <input type="email" id="user-email" name="email" placeholder="enter your email here..." required>
+                <button type="submit">Join the Adventure</button>
+            </form>
+        </section>
+
+    </main>
+
+        <!-- =========================================================
+            7. FOOTER SECTION (Copyright and extra links)
+            ========================================================= -->
+    <footer>
+        <p>&copy; 2026 VistaScape. All views welcomed.</p>
+        <div class="footer-links">
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>

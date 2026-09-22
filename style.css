@@ -1,0 +1,364 @@
+/* ==========================================================================
+   1. GLOBAL RESET & BASE STYLES
+   ========================================================================== */
+
+/* The root selector sets site-wide global configurations */
+:root {
+  --primary-color: #1b4d3e;     /* Deep forest nature green */
+  --secondary-color: #e67e22;   /* Vibrant outdoor orange for CTAs */
+  --dark-text: #2c3e50;         /* Soft, easy-to-read dark charcoal for text */
+  --light-bg: #f8f9fa;          /* Subtle light grey backdrops */
+  --white: #ffffff;             /* Pure white background cards */
+  --transition-speed: 0.3s;     /* Uniform rate for animations and hover effects */
+}
+
+/* Clear out default browser spacing anomalies across all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;       /* Forces paddings/borders inside element boundaries */
+}
+
+/* Enable smooth scrolling across internal anchor page jumps */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Establish core readability behaviors for the entire text body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark-text);
+  background-color: var(--white);
+  overflow-x: hidden;           /* Blocks accidental horizontal side-scrolling */
+}
+
+/* Remove default underline anchors and match color to design aesthetics */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--transition-speed) ease;
+}
+
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION STYLES
+   ========================================================================== */
+
+/* Locks the navbar to the top window view with modern glass blur transparency */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);   /* Softens elements moving behind the navbar */
+  display: flex;
+  justify-content: space-between;/* Forces logo to left edge, menu tabs to right edge */
+  align-items: center;
+  padding: 1.2rem 5%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;                /* Keeps header floating on top of everything else */
+}
+
+/* Styles the standalone logo anchor */
+header .logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  letter-spacing: -1px;
+}
+
+/* Flattens the unordered item set to remove bullets and aligns horizontally */
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;                    /* Sets spacing borders evenly between tabs */
+}
+
+/* Highlights text tabs when floating your cursor overlay across items */
+header nav ul a {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+header nav ul a:hover {
+  color: var(--secondary-color);
+}
+
+
+/* ==========================================================================
+   3. STRUCTURAL SECTION GENERAL CONTROLS
+   ========================================================================== */
+
+/* Standardize global spacing pads and inner constraints for body modules */
+section {
+  padding: 6rem 10% 4rem 10%;   /* Gives room to breath below the sticky header */
+  max-width: 1400px;
+  margin: 0 auto;               /* Perfect center alignment for massive wide monitors */
+}
+
+/* Centralizes subtitle text directly below section title identifiers */
+.section-subtitle {
+  text-align: center;
+  color: #7f8c8d;
+  margin-top: 0.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+
+/* ==========================================================================
+   4. HERO SECTOR (The Large Visual Entry Banner)
+   ========================================================================== */
+
+/* Mimics high-end hero photography using vertical flex alignments */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* Add your own backdrop graphic url file link within quotes below */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('hero-bg.jpg') no-repeat center center/cover;
+  color: var(--white);
+  padding-top: 8rem;            /* Insulates tracking text from overlaps */
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Renders standard hypertexts into clean clickable spatial capsule layout shapes */
+.cta-button {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  border-radius: 50px;          /* Perfectly pills structural endpoints */
+  box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+  transition: transform var(--transition-speed) ease, background-color var(--transition-speed);
+}
+
+.cta-button:hover {
+  background-color: #d35400;     /* Darkens orange fill layer safely on user hover */
+  transform: translateY(-3px);  /* Lightly lifts capsule dynamically off view canvas */
+}
+
+
+/* ==========================================================================
+   5. FEATURED CARD GRIDS (Destinations Component)
+   ========================================================================== */
+
+.destinations-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+/* Creates explicit 3-column rows that dynamically adapt down if required */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Structures cards with subtle border shadows and clip containment bounds */
+.destination-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-speed) ease;
+}
+
+.destination-card:hover {
+  transform: translateY(-8px);  /* Floats cards for elegant social focus */
+}
+
+/* Fixes display image dimensions without stretching raw visual nodes */
+.destination-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;            /* Crops visuals clean inside specified metrics */
+}
+
+.destination-card h3 {
+  padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+}
+
+.destination-card p {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: #555;
+  flex-grow: 1;                 /* Standardizes equal card heights on uneven content */
+}
+
+/* Text links styled directly under paragraphs */
+.read-more {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  align-self: flex-start;
+}
+
+.read-more:hover {
+  color: var(--secondary-color);
+}
+
+
+/* ==========================================================================
+   6. SHOWCASE PORTFOLIO (Gallery Section Layouts)
+   ========================================================================== */
+
+.gallery-section {
+  background-color: var(--light-bg);
+}
+
+.gallery-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease;
+}
+
+/* Simple cinematic zooming visual effects over image items */
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+
+/* ==========================================================================
+   7. TESTIMONIAL FEEDBACK LAYOUT (Quotes Structure)
+   ========================================================================== */
+
+.testimonials-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.testimonial-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Splitting views cleanly between items side-by-side */
+  gap: 3rem;
+}
+
+blockquote {
+  background-color: var(--light-bg);
+  padding: 2.5rem;
+  border-left: 5px solid var(--primary-color); /* Gives an editorial block quote accent line */
+  border-radius: 4px;
+}
+
+blockquote p {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 1rem;
+}
+
+cite {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-style: normal;
+}
+
+
+/* ==========================================================================
+   8. INPUT SUBMISSION BOX CONTROLS (Contact Forms)
+   ========================================================================== */
+
+.contact-section {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 20px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  margin-bottom: 2rem;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Aligns input box side-by-side with structural trigger endpoints */
+.contact-section form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;              /* Safe line breaks on extremely thin smartphones */
+}
+
+/* Completely hides helper label nodes cleanly away from vision but leaves raw access for screens */
+.contact-section label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.contact-section input[type="email"] {
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  outline: none;                /* Drops generic block borders on input field selection */
+  min-width: 280px;
+}
+
+.contact-section button[type="submit"] {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed);
+}
